@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+  <div style="float:left; display:block; width:100%; text-align:center; padding:20px; margin-top:30px;">
+    <img src="../static/images/logo-login.png" />
+  </div>
+
+  <div style="float:left; display:block; width:100%; text-align:center; padding:20px; margin-top:30px;">
+    <form action="{{ url_for('google_auth.logout') }}">
+      <input style="border:1px solid black; padding:10px; font-size:14px; color:black; background-color:#e6e6e6" type="submit" value="Logout Google Account" />
+    </form> 
+  </div>
+
+</body>
+</html>

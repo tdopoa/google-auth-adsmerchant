@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+  <meta http-equiv="expires" content="-1">
+  <meta name="locale" content="en-US">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <title>Sign In to Google for Authorize Ads and Shopping to Quartile</title>
+
+  <style>
+    input {
+        width: 90%;
+        background-color: #ffffff !important;
+        padding: 0 15px;
+        height: 45px;
+        border: 0;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: normal;
+        font-style: italic;
+        color: #343b3d;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border-radius: 8px;
+        margin-top:5px;
+        margin-left:24px;
+    }
+  </style>
+</head>
+
+<body style="display:block; margin: 8px; overflow:hidden">
+
+  <form action="{{ url_for('google_auth.login') }}" method="post">
+
+    <div style="float:left; display:block; width:100%; text-align:center; height:100%; text-align:center; padding:20px; margin-top:30px;">
+      <img src="../static/images/logo-login.png" />
+    </div>
+
+    <div style="float:left; border:1px solid #E4E4E4; border-radius:8px; background: #F4F4F4; display:block; margin-left:25%; width:50%; text-align:center; height:300px; text-align:center; padding:10px; margin-top:10px;">
+      <div style="float:left; width:100%; text-align:center; font-family: Roboto; color: #FD9827; font-size: 18px; font-weight: 700; margin: 0 0 40px;">
+        Sign in with you existing Google account
+      </div>
+      <div style="float:left; width:100%; text-align:left;">
+        <label style="float:left; margin-left: 24px; font-family: Roboto; font-size: 15px; font-weight: 500;">
+          Customer ID
+        </label>
+      </div>
+      <div style="float:left; width:100%; text-align:left;">
+        <input type="text" required class="input" id="customerId" name="customerId" placeholder="Google Customer ID">
+      </div>
+
+      <div style="float:left; width:100%; text-align:center;">
+        <img src="../static/images/button.png" onclick="document.forms[0].submit();" style="padding:30px; width:260px; height:60px;" />
+      </div>
+    </div>
+  </form>
+
+
+</body>
+</html>
